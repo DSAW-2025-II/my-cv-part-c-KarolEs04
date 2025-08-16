@@ -1,0 +1,144 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*cajas organizadas*/
+body {
+    font-family: "Archivo","Google Sans Code", 'Times New Roman', Times, serif;
+    margin: 0px;
+    background: rgb(238, 237, 237);
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto 1fr;
+    width: 1300px;
+    margin: 0px auto;
+}
+
+#content{
+    padding: 20px;
+
+    p{
+        line-height: 20px;
+    }
+
+    h2{color: #830e33;
+    line-height: 50px;
+    padding-bottom: 8px;
+    }
+
+    li{
+        padding-bottom: 5px;
+    }
+
+}
+
+#big-content{
+    grid-column: 1;
+    background: rgb(238, 237, 237);
+    padding: 20px;
+}
+
+li{
+    line-height: 28px;
+}
+
+#name {
+    grid-column: 1;
+    background: #830e33;
+    color: rgb(238, 237, 237);
+    padding: 80px;
+    text-align: center;
+    margin: 0px;
+}
+
+aside{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    background: #830e33;
+    color: rgb(252, 252, 252);
+    padding: 20px;
+
+    h2{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: 20px;
+    }
+
+    li{
+        padding-left: 15px;
+    }
+
+
+}
+
+.foto_cv{
+    display: flex;
+    align-items: center; 
+    margin: 0 auto;
+    width: 150px;   
+    height: auto;
+    padding-bottom: 20px;
+}
+
+/*Responsive design 🤓*/
+/*Celuu*/
+@media (max-width: 481px) {
+
+    #container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;    
+    }
+
+    #name{
+        order : 1;
+        padding: 30px 20px;
+        font-size: small;
+    }
+
+    aside{
+        order: 2;
+        padding: 10px 20px;
+        padding-left: 35px;
+        padding-bottom: 20px;
+        h2{
+            line-height: 17px;
+            font-size: medium;
+        }
+        li{
+            padding-left: 3px;
+            font-size: smaller;
+            line-height: 16px;
+        }
+    }
+
+    .foto_cv{
+        order: -1;
+    }
+
+    #big-content{
+        order: 3;
+        h2{font-size:medium;
+        }
+        li{font-size: small;}
+        line-height: 18px;
+        p{
+            font-size: small;
+        }
+    }
+    }
+
+    .desktop{
+        display: none;
+    } 
+
+/*Compuu*/
+@media (min-windth: 991px){
+    .movil{
+        display: none;
+    }
+}
